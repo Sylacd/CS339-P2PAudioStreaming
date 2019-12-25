@@ -191,8 +191,9 @@ public class SoundSender implements RTPAppIntf  {
 		}
 
 		//try { Thread.sleep(200);} catch(Exception e) {}
-		
-		this.rtpSession.endSession();
+		try{
+		this.rtpSession.endSession();}
+		catch (Exception e) {}
 		
 		//try { Thread.sleep(2000);} catch(Exception e) {}
 		if(RTPSession.rtpDebugLevel > 1) {
